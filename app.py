@@ -4,6 +4,9 @@ import json
 import requests
 import time
 from stepsFromName import *
+from readRecipeSteps import *
+from readSearchResults import *
+from searchDishesByName import *
 
 app = Flask(__name__)
 ask = Ask(app, "/")
@@ -14,12 +17,14 @@ def homepage():
 
 @ask.launch
 def start_skill():
-    welcome_message = 'Hello there, hwhat would you like to make today ?'
+    welcome_message = 'Hello there, what would you like to make today ?'
     return question(welcome_message)
 
 @ask.intent("searchdish",mapping={'dishname': "DishName"})
 def search_dish(dishname):
     print "Inside search_dish",
+    l = search(dishname)
+    print l
     return statement(dishname+" Searched successfully")
 
 @ask.intent('listenresults')
