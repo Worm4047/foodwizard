@@ -6,6 +6,9 @@
         "name":"DishName",
         "type":"dish_options"
       }]
+    },
+    {
+      "intent":"listenresults"
     }
   ]
 }

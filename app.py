@@ -3,8 +3,7 @@ from flask_ask import Ask, statement, question, session
 import json
 import requests
 import time
-import unidecode
-from utility import *
+
 
 app = Flask(__name__)
 ask = Ask(app, "/")
@@ -22,6 +21,9 @@ def start_skill():
 def search_dish(dishname):
     print "Inside search_dish",
     return statement(dishname+" Searched successfully")
+
+@ask.intent('listenresults')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
