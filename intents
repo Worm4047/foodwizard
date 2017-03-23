@@ -9,6 +9,26 @@
     },
     {
       "intent":"listenresults"
+    },
+    {
+      "intent":"getstepsofdish",
+      "slots":[{
+        "name":"DishName",
+        "type":"dish_options"
+      }]
+    },
+    {
+      "intent":"nextstep"
+    },
+    {
+      "intent":"previousstep"
+    },
+    {
+      "intent":"nstep",
+      "slots":[{
+        "name":"nValue",
+        "type":"nvalue"
+      }]
     }
   ]
 }

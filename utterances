@@ -1,2 +1,6 @@
-how to make {dish}
-please mention search results
+searchdish how to make {DishName}
+listenresults please mention search results
+getstepsofdish please mention steps for {DishName}
+nextstep go to next step
+previousstep go to previous step
+nstep go to {nValue} step

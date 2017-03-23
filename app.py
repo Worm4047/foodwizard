@@ -23,6 +23,29 @@ def search_dish(dishname):
     return statement(dishname+" Searched successfully")
 
 @ask.intent('listenresults')
+def listen_results():
+    print 'Inside listen_results'
+    return statement('results')
+
+@ask.intent('getstepsofdish',mapping={'dishname':'DishName'})
+def get_steps_of_dish(dishname):
+    print 'Inside get steps for dish'
+    return statement('steps')
+
+@ask.intent('nextstep')
+def next_step():
+    print 'inside next step'
+    return statement('next step')
+
+@ask.intent('previousstep')
+def next_step():
+    print 'inside previous step'
+    return statement('previous step')
+
+@ask.intent('nstep')
+def n_step():
+    print 'inside nth step'
+    return statement('n step')
 
 
 if __name__ == '__main__':
