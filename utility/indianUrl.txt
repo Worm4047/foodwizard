@@ -1,0 +1,5 @@
+indianAppetizers $ http://allrecipes.com/recipes/1874/world-cuisine/asian/indian/appetizers/?internalSource=hub%20nav&referringId=233&referringContentType=recipe%20hub&linkName=hub%20nav%20daughter&clickId=hub%20nav%202
+indianBread $ http://allrecipes.com/recipes/1876/world-cuisine/asian/indian/bread/?internalSource=hub%20nav&referringId=233&referringContentType=recipe%20hub&linkName=hub%20nav%20daughter&clickId=hub%20nav%202
+indianDessert $ http://allrecipes.com/recipes/1879/world-cuisine/asian/indian/desserts/?internalSource=hub%20nav&referringId=233&referringContentType=recipe%20hub&linkName=hub%20nav%20daughter&clickId=hub%20nav%202
+indianDrinks $ http://allrecipes.com/recipes/15935/world-cuisine/asian/indian/drinks/?internalSource=hub%20nav&referringId=233&referringContentType=recipe%20hub&linkName=hub%20nav%20daughter&clickId=hub%20nav%202
+indianMain $ http://allrecipes.com/recipes/17136/world-cuisine/asian/indian/main-dishes/?internalSource=hub%20nav&referringId=233&referringContentType=recipe%20hub&linkName=hub%20nav%20daughter&clickId=hub%20nav%202

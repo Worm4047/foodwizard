@@ -1,0 +1,3 @@
+frenchAppetizers $ http://allrecipes.com/recipes/1848/world-cuisine/european/french/appetizers/?internalSource=hub%20nav&referringId=721&referringContentType=recipe%20hub&linkName=hub%20nav%20daughter&clickId=hub%20nav%202
+frenchDesserts $ http://allrecipes.com/recipes/1828/world-cuisine/european/french/desserts/?internalSource=hub%20nav&referringId=721&referringContentType=recipe%20hub&linkName=hub%20nav%20daughter&clickId=hub%20nav%202
+frenchMain $ http://allrecipes.com/recipes/17138/world-cuisine/european/french/main-dishes/?internalSource=hub%20nav&referringId=721&referringContentType=recipe%20hub&linkName=hub%20nav%20daughter&clickId=hub%20nav%202

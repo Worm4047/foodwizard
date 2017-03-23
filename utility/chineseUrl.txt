@@ -1,0 +1,2 @@
+chinesemain $ http://allrecipes.com/recipes/17135/world-cuisine/asian/chinese/main-dishes/?internalSource=hub%20nav&referringId=695&referringContentType=recipe%20hub&linkName=hub%20nav%20daughter&clickId=hub%20nav%202
+chineseAppetizers $ http://allrecipes.com/recipes/1899/world-cuisine/asian/chinese/appetizers/?internalSource=hub%20nav&referringId=695&referringContentType=recipe%20hub&linkName=hub%20nav%20daughter&clickId=hub%20nav%202

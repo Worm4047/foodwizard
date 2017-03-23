@@ -1,0 +1,9 @@
+appetizers - http://allrecipes.com/recipes/1793/world-cuisine/european/italian/appetizers/?internalSource=hub%20nav&referringId=723&referringContentType=recipe%20hub&linkName=hub%20nav%20daughter&clickId=hub%20nav%202
+
+dessert - http://allrecipes.com/recipes/1791/world-cuisine/european/italian/desserts/?internalSource=hub%20nav&referringId=723&referringContentType=recipe%20hub&linkName=hub%20nav%20daughter&clickId=hub%20nav%202
+
+drinks - http://allrecipes.com/recipes/17551/world-cuisine/european/italian/drinks/?internalSource=hub%20nav&referringId=723&referringContentType=recipe%20hub&linkName=hub%20nav%20daughter&clickId=hub%20nav%202
+
+main dishes - http://allrecipes.com/recipes/16767/world-cuisine/european/italian/main-dishes/?internalSource=hub%20nav&referringId=723&referringContentType=recipe%20hub&linkName=hub%20nav%20daughter&clickId=hub%20nav%202
+
+salads - http://allrecipes.com/recipes/1800/world-cuisine/european/italian/salads/?internalSource=hub%20nav&referringId=723&referringContentType=recipe%20hub&linkName=hub%20nav%20daughter&clickId=hub%20nav%202
