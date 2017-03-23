@@ -25,13 +25,18 @@ if __name__=="__main__":
 	data = r.text
 	# print data
 	soup = BeautifulSoup(data,"html.parser")
-	urlStepsPage = findArticle(soup)
-	r  = requests.get(baseUrl+urlStepsPage)
-	data = r.text
-	# print data
-	soup = BeautifulSoup(data,"html.parser")
-	steps = getSteps(soup)
-	print steps
+	#Todo - 5 dishes names::::url 
+	##Save them into a text file
+	##Return number of result
+
+	#obsolete
+	# urlStepsPage = findArticle(soup)
+	# r  = requests.get(baseUrl+urlStepsPage)
+	# data = r.text
+	# # print data
+	# soup = BeautifulSoup(data,"html.parser")
+	# steps = getSteps(soup)
+	# print steps
 	
 	
 
