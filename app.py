@@ -3,7 +3,7 @@ from flask_ask import Ask, statement, question, session
 import json
 import requests
 import time
-
+from stepsFromName import *
 
 app = Flask(__name__)
 ask = Ask(app, "/")
@@ -30,7 +30,11 @@ def listen_results():
 @ask.intent('getstepsofdish',mapping={'dishname':'DishName'})
 def get_steps_of_dish(dishname):
     print 'Inside get steps for dish'
-    return statement('steps')
+    print dishname
+    l=1
+    l = getSteps(dishname)
+    retStr =" Steps found.Would you like to hear them out ?"
+    return statement(retStr)
 
 @ask.intent('nextstep')
 def next_step():
