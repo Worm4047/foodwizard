@@ -30,7 +30,9 @@ def search_dish(dishname):
 @ask.intent('listenresults')
 def listen_results():
     print 'Inside listen_results'
-    return statement('results')
+    res = returnResults('dishsearchresult.txt')
+    print res
+    return statement(res)
 
 @ask.intent('getstepsofdish',mapping={'dishname':'DishName'})
 def get_steps_of_dish(dishname):
@@ -44,17 +46,29 @@ def get_steps_of_dish(dishname):
 @ask.intent('nextstep')
 def next_step():
     print 'inside next step'
-    return statement('next step')
+    step=readNext('recipeSteps.txt')
+    print step
+    return statement(step)
 
 @ask.intent('previousstep')
-def next_step():
+def previous_step():
     print 'inside previous step'
-    return statement('previous step')
+    step=readPrev('recipeSteps.txt')
+    print step
+    return statement(step)
 
-@ask.intent('nstep')
-def n_step():
+@ask.intent('nstep',mapping={'nvalue':'nValue'})
+def n_step(nvalue):
+    li2=['1st','2nd','3rd','4th','5th','6th','7th','8th','9th','10th']
+    li1=['first','second','third','fourth','fifth','sixth','seventh','eigth','ninth','tenth']
     print 'inside nth step'
-    return statement('n step')
+    if nvalue not in li1:
+        ind=li2.index(nvalue)
+    else:
+        ind=li1.index(nvalue)
+            
+    step=readNthLine('recipeSteps.txt',ind)
+    return statement(step)
 
 
 if __name__ == '__main__':

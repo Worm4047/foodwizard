@@ -5,12 +5,18 @@ except ImportError:
 
 import requests  
 
-# def findArticle(soup):
-# 	for item in soup.find_all('a',attrs={'data-internal-referrer-link':'hub recipe'}):
-# 		return item['href']
+def geturlFromFile(query):
+	filename='dishsearchresult.txt'
+	dish={}
+	for line in open(filename):
+		name,url=line.split('::::')
+		dish[name]=url
+	return dish[query]
+
 
 def getSteps(dishname):
-	url = "http://allrecipes.com/recipe/212392/loukoumades/?internalSource=hub%20recipe&referringContentType=search%20results&clickId=cardslot%201"
+	url=geturlFromFile(dishname)
+	# url = "http://allrecipes.com/recipe/212392/loukoumades/?internalSource=hub%20recipe&referringContentType=search%20results&clickId=cardslot%201"
 	r  = requests.get(url)
 	data = r.text
 	soup = BeautifulSoup(data,"html.parser")
@@ -20,6 +26,8 @@ def getSteps(dishname):
 			steps.append(step.text)
 	with open('recipeSteps.txt','w') as myfile:
 		myfile.write('\n'.join(steps))
+	with open('index.txt','w') as myfile3:
+		myfile3.write('-1')
 	return len(steps)
 
 	

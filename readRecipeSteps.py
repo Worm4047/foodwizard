@@ -1,40 +1,30 @@
-
-def readNext(fileName,index):
+def readNext(fileName):
+	r=''
+	for line in open('index.txt'):
+		r=line
+	i=int(r)+1
 	with open(fileName) as fp:
-		for i, line in enumerate(fp):
-			if i == index:
-				return line
-
-		return "No next line"		
-	fp.close()
-
-
-
+		content=fp.readlines()
+	with open('index.txt','w') as myfile:
+		myfile.write(str(i))
+	return content[i]		
             
-def readPrev(fileName,index):
-	prev=""
+def readPrev(fileName):
+	r=''
+	for line in open('index.txt'):
+		r=line
+	i=int(r)-1
 	with open(fileName) as fp:
-		for i, line in enumerate(fp):
-			if i+1 == index:
-				if not prev:
-					break
-
-				return prev
-			prev=line
-
-		return "No prev Line"		
-	fp.close()
+		content=fp.readlines()
+	with open('index.txt','w') as myfile:
+		myfile.write(str(i))
+	return content[i]	
 
 
-def readNthLine(fileName,index):
+def readNthLine(fileName,n):
 	with open(fileName) as fp:
-		for i, line in enumerate(fp):
-			if i+1 == index:
-				return line
-
-		return "No such Line"
-
-	fp.close()
+		content=fp.readlines()
+	return content[n]	
 
 
 
