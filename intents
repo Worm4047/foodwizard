@@ -1,0 +1,11 @@
+{
+  "intents": [
+    {
+      "intent": "searchdish",
+      "slots":[{
+        "name":"DishName",
+        "type":"dish_options"
+      }]
+    }
+  ]
+}
