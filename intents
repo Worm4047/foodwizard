@@ -29,6 +29,23 @@
         "name":"nValue",
         "type":"nvalue"
       }]
+    },
+    {
+      "intent":"dishsearchbyingredients",
+      "slots":[{
+        "name":"ingredient",
+        "type":"Ingredient"
+      }]
+    },
+    {
+      "intent":"addingredient",
+      "slots":[{
+        "name":"ingredient",
+        "type":"Ingredient"
+      }]
+    },
+    {
+      "intent":"ingdishsearchfromfile"
     }
   ]
 }

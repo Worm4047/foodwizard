@@ -7,6 +7,8 @@ from stepsFromName import *
 from readRecipeSteps import *
 from readSearchResults import *
 from searchDishesByName import *
+import ing_dish_from
+
 
 app = Flask(__name__)
 ask = Ask(app, "/")
@@ -25,7 +27,7 @@ def search_dish(dishname):
     print "Inside search_dish",
     l = search(dishname)
     print l
-    return statement(dishname+" Searched successfully")
+    return question(dishname+" Searched successfully, would you like to hear results ?")
 
 @ask.intent('listenresults')
 def listen_results():
@@ -70,6 +72,25 @@ def n_step(nvalue):
     step=readNthLine('recipeSteps.txt',ind)
     return statement(step)
 
+@ask.intent('dishsearchbyingredients',mapping={'ing':'ingredient'})
+def dish_search_by_ing(ing):
+    print 'Inside side serach by ing'
+    with open('ingList.txt','a') as fp:
+        fp.write(ing)
+    return question('Would you like to add another ingredient or should i search for dish ?')
+
+@ask.intent('addingredient',mapping={'ing':'ingredient'})
+def add_ingredient(ing):
+    print 'Inside add ingredient by ing'
+    with open('ingList.txt','a') as fp:
+        fp.write('\n'+ing)
+    return question('Would you like to add another ingredient or should i search for dish ?')
+@ask.intent('ingdishsearchfromfile')
+def ing_dish_search_from_file():
+    print 'Ingredient dish search final'
+    l=ing_dish_from.searchdishfroming()
+    print l
+    return question(" Searched successfully, would you like to hear results ?")
 
 if __name__ == '__main__':
     app.run(debug=True)

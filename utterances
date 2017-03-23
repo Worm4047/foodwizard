@@ -4,3 +4,6 @@ getstepsofdish please mention steps for {DishName}
 nextstep go to next step
 previousstep go to previous step
 nstep go to {nValue} step
+dishsearchbyingredients find what can i make using {ingredient}
+addingredient add {ingredient} to list
+ingdishsearchfromfile search dish from following ingredients

@@ -25,21 +25,25 @@ def findArticles(soup):
 			break;
 	return '\n'.join(items),len(items)
 
-def search(query):
-	baseUrl='http://allrecipes.com'	
-	#q='bread and butter pudding'
-	url = "http://allrecipes.com/search/results/?wt="+query+"&sort=re"
+def readingfromfile():
+	filename='ingList.txt'
+	ings=[]
+	for line in open(filename):
+		ings.append(line)
+	return ','.join(ings)
+
+def searchdishfroming():
+	query=readingfromfile()	
+	#http://allrecipes.com/search/results/?ingIncl=bread,cheese&sort=re
+	url = "http://allrecipes.com/search/results/?ingIncl="+query+"&sort=re"
 	print url
-	#http://allrecipes.com/search/results/?wt=bread and butter pudding&sort=re
 	r  = requests.get(url)
 	data = r.text
 	# print data
 	soup = BeautifulSoup(data,"html.parser")
-
 	res,n = findArticles(soup)
-
 	with open(DATAFILE,'w') as resultfile:
 		resultfile.write(res)
 	return n
 
-
+# print search()
