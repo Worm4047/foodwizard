@@ -3,9 +3,6 @@ from flask_ask import Ask, statement, question, session
 import json
 import requests
 import time
-import smtplib
-from email.MIMEMultipart import MIMEMultipart
-from email.MIMEText import MIMEText
 from stepsFromName import *
 from readRecipeSteps import *
 from readSearchResults import *
