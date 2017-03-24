@@ -58,6 +58,13 @@
         "type":"category"
         }
       ]
+    },
+    {
+      "intent":"getdishingredients",
+      "slots":[{
+        "name":"DishName",
+        "type":"dish_options"
+      }]
     }
   ]
 }

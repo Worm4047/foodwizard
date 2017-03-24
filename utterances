@@ -8,4 +8,4 @@ dishsearchbyingredients find what can i make using {ingredient}
 addingredient add {ingredient} to list
 ingdishsearchfromfile search dish from following ingredients
 categorydishsearch mention dishes of {Cuisine} {Category}
-listeningridients please mention ingridients
+getdishingredients mention ingredients of {DishName}

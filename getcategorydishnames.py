@@ -8,4 +8,4 @@ def getcategorydish(category,cuisine):
 	for line in open(filename):
 		if not line in items:
 			items.append(line)
-	return '\n'.join(items)
+	return '...'.join(items[:10])

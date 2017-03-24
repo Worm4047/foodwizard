@@ -7,7 +7,7 @@ import requests
 
 BASEURL = 'http://allrecipes.com'
 LIMIT = 5
-DATAFILE = 'ingridients.txt'
+DATAFILE = 'recipeingridients.txt'
 BASE_FILE = 'dishsearchresult.txt'
 def findIngridients(soup):
 	i = 0
