@@ -28,7 +28,7 @@ def findIngridients(soup):
 		#print var
 		if var != 'None':
 			items.append(var)
-	return '\n'.join(items),len(items)
+	return '...'.join(items),len(items)
 
 
 """ 
@@ -39,6 +39,7 @@ def findIngridients(soup):
 
 def getIngList(name):
 	dish = {}
+	name=name.lower()
 	for line in open(BASE_FILE):
 		dname,durl = line.split('::::')
 		dish[dname]=durl
@@ -53,7 +54,7 @@ def getIngList(name):
 	res,n = findIngridients(soup)
 	with open(DATAFILE,'w') as resultfile:
 		resultfile.write(res)
-	return n
+	return res
 	
 #print getIngList('Curried Coconut Egg Drop Soup')
 

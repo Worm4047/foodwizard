@@ -50,6 +50,7 @@ def get_steps_of_dish(dishname):
     print dishname
     l=1
     l = getSteps(dishname)
+    ing = ingFunc.getIngList(dishname)
     print l
     retStr =" Steps found.Would you like to hear them out ?"
     editHtmlFile(dishname)
@@ -111,7 +112,7 @@ def category_dish_search(category,cuisine):
 @ask.intent('getdishingredients',mapping={'dishname':'DishName'})
 def get_dish_ing(dishname):
     ing = ingFunc.getIngList(dishname)
-    return statement('...'.join(ing))
+    return statement(ing)
 
 def saveHtml(soup,html):
     html.close()
@@ -138,6 +139,15 @@ def editHtmlFile(dishname='Brocolli'):
         text+='<li class="list-group-item"><h4>'+step+'</h4></li>'
     text+='</ul>'
     item=soup.find('div',attrs={'id':'steps'})
+    item.clear()
+    item.append(text)
+    print item
+    text=''
+    text='<ul class="list-group">'
+    for ing in ings:
+        text+='<li class="list-group-item"><h4>'+ing+'</h4></li>'
+    text+='</ul>'
+    item=soup.find('div',attrs={'id':'ings'})
     item.clear()
     item.append(text)
     print item
