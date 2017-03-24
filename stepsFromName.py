@@ -40,6 +40,10 @@ def getSteps(dishname):
 		for step in item.find_all('li'):
 			steps.append(step.text)
 	print steps
+	item = soup.find('img',attrs={'class':'rec-photo'})
+	imgurl=item['src']
+	with open('imgurl.txt','w') as myfile:
+		myfile.write(imgurl)
 	with open('recipeSteps.txt','w') as myfile:
 		myfile.write('\n'.join(steps))
 	with open('index.txt','w') as myfile3:

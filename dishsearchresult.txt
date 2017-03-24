@@ -1,5 +1,5 @@
-grilled cheese sandwich::::http://allrecipes.com/recipe/23891/grilled-cheese-sandwich/
-pesto grilled cheese sandwich::::http://allrecipes.com/recipe/189891/pesto-grilled-cheese-sandwich/
-italian grilled cheese sandwiches::::http://allrecipes.com/recipe/54725/italian-grilled-cheese-sandwiches/
-awesome grilled cheese sandwiches::::http://allrecipes.com/recipe/32089/awesome-grilled-cheese-sandwiches/
-spicy grilled cheese sandwich::::http://allrecipes.com/recipe/85901/spicy-grilled-cheese-sandwich/
+veggie pizza::::http://allrecipes.com/recipe/15022/veggie-pizza/
+pita pizza::::http://allrecipes.com/recipe/14584/pita-pizza/
+fruit pizza::::http://allrecipes.com/recipe/24183/fruit-pizza/
+grilled pizza::::http://allrecipes.com/recipe/205110/grilled-pizza/
+dessert pizza::::http://allrecipes.com/recipe/16712/dessert-pizza/
