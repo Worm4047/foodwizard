@@ -19,7 +19,7 @@ def findArticles(soup):
 			continue
 		for htag in item.find_all('h3',attrs={'class':'grid-col__h3 grid-col__h3--recipe-grid'}):
 			if 'recipe' in item['href']:
-				items.append(htag.text.strip()+'::::'+BASEURL+item['href'])
+				items.append((htag.text.strip()).lower()+'::::'+BASEURL+item['href'])
 			else:
 				i=i-1
 		if i >= LIMIT*2:

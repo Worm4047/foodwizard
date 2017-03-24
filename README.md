@@ -11,5 +11,14 @@ The good old method of recipe search.Just ask alexa to search for the dish using
 	`Alexa ask foodwizard how cheese sanwich are made`
 ##Step by step guidance
 
-Alexa then uses ceratin magic potion of Html Parsing and Beautiful Soup to find dishes matching the input query.
-user then decides which dish he/she is interested in.
+Foodwizard guides you through the entire process of creating the dish.
+
+##Searching possible dish combinations using the ingredients available with you.
+
+Foodwizard finds possible dish for you to make using the ingredients present at you disposal
+
+##Dishes of various cuisines and category
+
+Food wizard gives you the facility to choose from a wide variety of cuisines like Indian,French,Italian,Mexican,Chinese,Greek etc.
+Ecah cuisine can further be exploited for it's dessert,drinks,main dishes,appetizers and bread.
+Thus providing an overall awesome experience for your kitchen time.
