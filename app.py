@@ -25,7 +25,7 @@ def start_skill():
 @ask.intent("searchdish",mapping={'dishname': "DishName"})
 def search_dish(dishname):
     print "Inside search_dish",
-    l = search(dishname)
+    l = getDishesByName(dishname)
     print l
     return question(dishname+" Searched successfully, would you like to hear results ?")
 
@@ -42,6 +42,7 @@ def get_steps_of_dish(dishname):
     print dishname
     l=1
     l = getSteps(dishname)
+    print l
     retStr =" Steps found.Would you like to hear them out ?"
     return statement(retStr)
 

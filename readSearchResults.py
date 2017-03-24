@@ -1,8 +1,7 @@
 
 def returnResults(fileName):
-	result=""
+	result=[]
 	for line in open(fileName):
-		(name,url)=line.split(':')
-		result=result+name+'\n'
-
-	return result		
+		(name,url)=line.split('::::')
+		result.append(name)
+	return '...'.join(result)		
