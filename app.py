@@ -118,7 +118,7 @@ def saveHtml(soup,html):
     html.close()
     html = soup.prettify("utf-8")
     with open("./web/index.html", "wb") as file:
-        file.write(soup.prettify(formatter=None))
+        file.write(soup.prettify(formatter=None).encode('utf-8'))
     
 def editHtmlFile(dishname='Brocolli'):
     FILENAME='./web/index.html'
@@ -134,19 +134,22 @@ def editHtmlFile(dishname='Brocolli'):
     item.contents[0].replaceWith(dishname)
     item=soup.find('img',attrs={'id':'recimg'})
     item['src']=imgurl
-    text='<ul class="list-group">'
+    text='<ol class="list-group">'
     for step in steps:
         text+='<li class="list-group-item"><h4>'+step+'</h4></li>'
-    text+='</ul>'
+    text+='</ol>'
     item=soup.find('div',attrs={'id':'steps'})
     item.clear()
     item.append(text)
     print item
     text=''
-    text='<ul class="list-group">'
+    text='<ol class="list-group">'
     for ing in ings:
-        text+='<li class="list-group-item"><h4>'+ing+'</h4></li>'
-    text+='</ul>'
+        for item in ing.split('...'):
+            print item
+            text+='<li class="list-group-item"><h4>'+item+'</h4></li>'
+    text+='</ol>'
+    # print text
     item=soup.find('div',attrs={'id':'ings'})
     item.clear()
     item.append(text)
