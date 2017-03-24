@@ -65,6 +65,12 @@
         "name":"DishName",
         "type":"dish_options"
       }]
+    },{
+      "intent":"sharerecipe",
+      "slots":[{
+        "name":"DishName",
+        "type":"dish_options"
+      }]
     }
   ]
 }
