@@ -16,7 +16,7 @@ def geturlFromFile(query):
 
 def getSteps(dishname):
 	url=geturlFromFile(dishname.lower()).replace('\n','')
-	
+	print url
 	# url = "http://allrecipes.com/recipe/212392/loukoumades/?internalSource=hub%20recipe&referringContentType=search%20results&clickId=cardslot%201"
 	r  = requests.get(url)
 	data = r.text
@@ -30,6 +30,8 @@ def getSteps(dishname):
 		myfile.write('\n'.join(steps))
 	with open('index.txt','w') as myfile3:
 		myfile3.write('-1')
+		myfile3.write('\n')
+		myfile3.write(str(len(steps)))
 	return len(steps)
 
 	
