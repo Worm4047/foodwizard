@@ -8,7 +8,7 @@ Foodwizard is your kitchen buddy.Combining the power of Alexa lambda functions, 
 
 The good old method of recipe search.Just ask alexa to search for the dish using it's name eg:-
 
-	`Alexa ask foodwizard how cheese sanwich are made`
+	`Alexa ask foodwizard how cheese sandwich are made`
 ## Step by step guidance
 
 Foodwizard guides you through the entire process of creating the dish.
