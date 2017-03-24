@@ -7,4 +7,5 @@ Foodwizard is your kitchen buddy.Combining the power of Alexa lambda functions, 
 ##Recipe search - By Recipe Name
 
 The good old method of recipe search.Just ask alexa to search for the dish using it's name eg:-
+
 `alexa ask foodwizard to tell me how cheese sanwich are made`
