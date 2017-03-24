@@ -5,6 +5,13 @@ except ImportError:
 
 import requests  
 
+
+""" 
+	reads the searchresult file for names and urls of dishes
+	args : query name of dish
+	returns : url of the dish recipe
+"""
+
 def geturlFromFile(query):
 	print query
 	filename='dishsearchresult.txt'
@@ -13,6 +20,13 @@ def geturlFromFile(query):
 		name,url=line.split('::::')
 		dish[name]=url
 	return dish[query]
+
+
+""" 
+	searches for recipe of a dish and writes the steps to a file
+	args : query name of dish
+	returns : number of  steps in recipe
+"""
 
 def getSteps(dishname):
 	url=geturlFromFile(dishname.lower()).replace('\n','')

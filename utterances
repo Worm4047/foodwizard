@@ -1,11 +1,32 @@
 searchdish how to make {DishName}
+searchdish search dish {DishName}
+searchdish search {DishName}
 listenresults please mention search results
-getstepsofdish please mention steps for {DishName}
+listenresults mention search results
+listenresults list out search results
+getstepsofdish mention steps for {DishName}
+getstepsofdish steps for {DishName}
+getstepsofdish how can i make {DishName}
+getstepsofdish what steps to follow to make {DishName}
 nextstep go to next step
+nextstep next step
+nextstep next
 previousstep go to previous step
+previousstep  previous step
+previousstep previous
 nstep go to {nValue} step
+nstep show {nValue} step
+nstep list out {nValue} step
 dishsearchbyingredients find what can i make using {ingredient}
+dishsearchbyingredients search dishes i can make using {ingredient}
+dishsearchbyingredients  search dishes using {ingredient}
 addingredient add {ingredient} to list
+addingredient add {ingredient}
 ingdishsearchfromfile search dish from following ingredients
+ingdishsearchfromfile search dish using ingredients
 categorydishsearch mention dishes of {Cuisine} {Category}
+categorydishsearch get some {Cuisine} {Category}
+categorydishsearch list some {Cuisine} {Category}
 getdishingredients mention ingredients of {DishName}
+getdishingredients get ingredients of {DishName}
+sharerecipe share {DishName} recipe

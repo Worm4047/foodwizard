@@ -1,3 +1,11 @@
+
+LIMIT=10
+
+""" 
+	searches for dishes matching the required category and cuisine 
+	args : query name of category and cuisine
+	returns : list of 10 dishes
+"""
 def getcategorydish(category,cuisine):
 	folder=category
 	category=list(category)
@@ -8,4 +16,7 @@ def getcategorydish(category,cuisine):
 	for line in open(filename):
 		if not line in items:
 			items.append(line)
-	return '...'.join(items[:10])
+	return '...'.join(items[:min(len(items),LIMIT)])
+
+
+#print getcategorydish('Appetizers','indian')

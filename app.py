@@ -3,6 +3,9 @@ from flask_ask import Ask, statement, question, session
 import json
 import requests
 import time
+import smtplib
+from email.MIMEMultipart import MIMEMultipart
+from email.MIMEText import MIMEText
 from stepsFromName import *
 from readRecipeSteps import *
 from readSearchResults import *
@@ -25,7 +28,7 @@ def start_skill():
 
 @ask.intent("searchdish",mapping={'dishname': "DishName"})
 def search_dish(dishname):
-    print "Inside search_dish",
+    print "Inside search_dish",dishname
     l = getDishesByName(dishname)
     print l
     return question(dishname+" Searched successfully, would you like to hear results ?")
@@ -105,15 +108,5 @@ def get_dish_ing(dishname):
     ing = ingFunc.getIngList(dishname)
     return statement('...'.join(ing))
 
-@ask.intent('sharerecipe',mapping={'dishname':'DishName'})
-def share_recipe(dishname):
-    steps=getSteps('recipeSteps.txt')
-    print steps
-    return  statement('Recipe shared successfully')
-
-def recipeSteps(filename):
-    with open(filename) as myfile:
-        contents=myfile.readlines()
-    
 if __name__ == '__main__':
     app.run(debug=True)

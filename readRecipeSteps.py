@@ -1,4 +1,3 @@
-
 def readNext(fileName):
 	i=''
 	n=''
@@ -18,6 +17,8 @@ def readNext(fileName):
 		contents.append(line)
 	with open('index.txt','w') as m:
 		m.write(str(i))
+		m.write('\n')
+		m.write(str(n))
 	return contents[i]
           
 def readPrev(fileName):
@@ -32,6 +33,8 @@ def readPrev(fileName):
 		contents.append(line)
 	with open('index.txt','w') as m:
 		m.write(str(i))
+		m.write('\n')
+		m.write(str(n))
 	return contents[i]
 
 

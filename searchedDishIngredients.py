@@ -10,6 +10,15 @@ BASEURL = 'http://allrecipes.com'
 LIMIT = 5
 DATAFILE = 'recipeingridients.txt'
 BASE_FILE = 'dishsearchresult.txt'
+
+
+
+""" 
+	parshes html content to get indridients 
+	args : BeautifulSoup object 
+	returns : list of ingridients
+"""
+
 def findIngridients(soup):
 	i = 0
 	items = []
@@ -21,13 +30,18 @@ def findIngridients(soup):
 			items.append(var)
 	return '\n'.join(items),len(items)
 
+
+""" 
+	searches for ingridients of a particular dish and writes them to a file
+	args : query name of dish
+	returns : number of ingridients found
+"""
+
 def getIngList(name):
 	dish = {}
 	for line in open(BASE_FILE):
 		dname,durl = line.split('::::')
 		dish[dname]=durl
-	#print dish['Egg Curry']
-	#print url
 	url = dish[name].strip()
 	r  = requests.get(url)
 	data = r.text

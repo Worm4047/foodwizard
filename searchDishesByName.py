@@ -9,28 +9,34 @@ BASEURL = 'http://allrecipes.com'
 LIMIT = 5
 DATAFILE = 'dishsearchresult.txt'
 
+
+
+""" 
+	parshes html content to get links and names of the dishes
+	args : BeautifulSoup object 
+	returns : list of dish names and urls
+"""
 def findArticles(soup):
-	i = 0
 	items = []
 	for ar in soup.find_all('article'):
 	#for item in ar.find_all('a',attrs={'data-internal-referrer-link':'hub recipe'}):
 		item = ar.find('a')
 		if not item: continue	
-		i += 1
-		if i%2==0:
-			continue
 		for htag in item.find_all('h3',attrs={'class':'grid-col__h3 grid-col__h3--recipe-grid'}):
 			if 'recipe' in item['href']:
-				items.append((htag.text.strip()).lower()+'::::'+BASEURL+item['href'])
-			else:
-				i=i-1
-		if i >= LIMIT*2:
-			break;
-	return '\n'.join(items),len(items)
+				temp=item['href'].split('/')
+				if len(temp)>3:
+					items.append((htag.text.strip()).lower()+'::::'+BASEURL+item['href'])
+				
+	return '\n'.join(items[0:min(len(items),LIMIT)]),len(items)
 
+
+""" 
+	searches dishes by name and writes to file, name and Url's for recipe
+	args : query name of dish
+	returns : number of dishes found
+"""
 def getDishesByName(query):
-	baseUrl='http://allrecipes.com'	
-	#q='bread and butter pudding'
 	url = "http://allrecipes.com/search/results/?wt="+query+"&sort=re"
 	print url
 	#http://allrecipes.com/search/results/?wt=bread and butter pudding&sort=re
@@ -45,3 +51,4 @@ def getDishesByName(query):
 	return n
 
 
+getDishesByName('egg rolls')
