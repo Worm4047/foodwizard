@@ -20,5 +20,12 @@ Foodwizard finds possible dish for you to make using the ingredients present at 
 ## Dishes of various cuisines and category
 
 Food wizard gives you the facility to choose from a wide variety of cuisines like Indian,French,Italian,Mexican,Chinese,Greek etc.
-Ecah cuisine can further be exploited for it's dessert,drinks,main dishes,appetizers and bread.
+Each cuisine can further be exploited for it's dessert,drinks,main dishes,appetizers and bread.
 Thus providing an overall awesome experience for your kitchen time.
+
+# How FoodWizard helps 'COMMON MAN' ?
+
+Foodwizard creates the entire process of creating dishes seamless and verbal, thereby allowing users to interact with the device even while making the dishes, this way they won't have to `Touch` electronic devices whil cooking.
+FoodWizard guides you through the entire process and repeats any step as and when needed.
+FoodWizard exposes the user to vast arena of Recipes all around the globe at the same time providing required ingredients and steps to make the dish.
+
