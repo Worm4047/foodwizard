@@ -8,7 +8,7 @@ from readRecipeSteps import *
 from readSearchResults import *
 from searchDishesByName import *
 import ing_dish_from
-
+from getcategorydishnames import *
 
 app = Flask(__name__)
 ask = Ask(app, "/")
@@ -91,6 +91,15 @@ def ing_dish_search_from_file():
     l=ing_dish_from.searchdishfroming()
     print l
     return question(" Searched successfully, would you like to hear results ?")
+
+@ask.intent('categorydishsearch',mapping={'category':'Category','cuisine':'Cuisine'})
+def category_dish_search(category,cuisine):
+    print 'inside category search'
+    text=getcategorydish(category,cuisine)
+    print text
+    return statement(text)
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

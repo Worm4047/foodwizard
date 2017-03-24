@@ -13,7 +13,6 @@ def geturlFromFile(query):
 		dish[name]=url
 	return dish[query]
 
-
 def getSteps(dishname):
 	url=geturlFromFile(dishname)
 	# url = "http://allrecipes.com/recipe/212392/loukoumades/?internalSource=hub%20recipe&referringContentType=search%20results&clickId=cardslot%201"

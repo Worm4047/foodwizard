@@ -46,6 +46,18 @@
     },
     {
       "intent":"ingdishsearchfromfile"
+    },
+    {
+      "intent":"categorydishsearch",
+      "slots":[{
+        "name":"Cuisine",
+        "type":"cuisine"
+        },
+        {
+        "name":"Category",
+        "type":"category"
+        }
+      ]
     }
   ]
 }
