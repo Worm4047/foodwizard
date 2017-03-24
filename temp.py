@@ -7,14 +7,9 @@ def saveHtml(soup,html):
 	html.close()
 	html = soup.prettify("utf-8")
 	with open("./web/index.html", "wb") as file:
-		file.write(soup.prettify())
-	data = open('./web/index.html','wb')
-	data=data.replace('&lt;','<')
-	data=data.replace('&gt;','>')
-	with open("./web/index.html", "wb") as file:
-		file.write(data)
-
-def editHtmlFile():
+		file.write(soup.prettify(formatter=None))
+	
+def editHtmlFile(dishname='Brocolli'):
     FILENAME='./web/index.html'
     data=open(FILENAME)
     soup=BeautifulSoup(data,"html.parser")
@@ -24,11 +19,13 @@ def editHtmlFile():
         ings=fp.readlines()
     with open('imgurl.txt','r') as fp:
         imgurl=fp.readlines()
-   
-
-    text='<ul>'
+	item=soup.find('h2',attrs={'id':'dishname'})
+    item.contents[0].replaceWith(dishname)
+    item=soup.find('img',attrs={'id':'recimg'})
+    item['src']=imgurl
+    text='<ul class="list-group">'
     for step in steps:
-        text+='<li>'+step+'</li>'
+        text+='<li class="list-group-item"><h4>'+step+'</h4></li>'
     text+='</ul>'
     item=soup.find('div',attrs={'id':'steps'})
     item.clear()
