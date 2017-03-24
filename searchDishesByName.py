@@ -19,8 +19,11 @@ def findArticles(soup):
 		i += 1
 		if i%2==0:
 			continue
-		htag = item.find('h3')
-		items.append((htag.text.strip()).lower()+'::::'+BASEURL+item['href'])
+		for htag in item.find_all('h3',attrs={'class':'grid-col__h3 grid-col__h3--recipe-grid'}):
+			if 'recipe' in item['href']:
+				items.append(htag.text.strip()+'::::'+BASEURL+item['href'])
+			else:
+				i=i-1
 		if i >= LIMIT*2:
 			break;
 	return '\n'.join(items),len(items)
@@ -29,6 +32,7 @@ def getDishesByName(query):
 	baseUrl='http://allrecipes.com'	
 	#q='bread and butter pudding'
 	url = "http://allrecipes.com/search/results/?wt="+query+"&sort=re"
+	print url
 	#http://allrecipes.com/search/results/?wt=bread and butter pudding&sort=re
 	r  = requests.get(url)
 	data = r.text

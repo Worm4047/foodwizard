@@ -5,6 +5,7 @@ except ImportError:
 
 import requests  
 
+
 BASEURL = 'http://allrecipes.com'
 LIMIT = 5
 DATAFILE = 'recipeingridients.txt'

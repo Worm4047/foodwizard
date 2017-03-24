@@ -9,6 +9,7 @@ from readSearchResults import *
 from searchDishesByName import *
 import ing_dish_from
 from getcategorydishnames import *
+import searchedDishIngredients as ingFunc
 
 app = Flask(__name__)
 ask = Ask(app, "/")
@@ -99,7 +100,10 @@ def category_dish_search(category,cuisine):
     text=getcategorydish(category,cuisine)
     print text
     return statement(text)
-
+@ask.intent('getdishingredients',mapping={'dishname':'DishName'})
+def get_dish_ing(dishname):
+    ing = ingFunc.getIngList(dishname)
+    return statement('...'.join(ing))
 
 
 if __name__ == '__main__':
