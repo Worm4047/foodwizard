@@ -1,7 +1,7 @@
 # Foodwizard
 
 ### FoodWizard operates on the principle:- 
-`Every one needs to eat food and the easiest and the cheapest way is to cook with what you already have`
+`Every one needs to cook and the easiest and the cheapest way is to cook with what you already have`
 
 Foodwizard is your kitchen buddy.Combining the power of Alexa lambda functions, Foodwizard gives you the ability to retrieve your favorite recipes through commands and conversations making the entire process of information exchange verbal.
 
