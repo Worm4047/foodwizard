@@ -23,8 +23,14 @@ def readNext(fileName):
           
 def readPrev(fileName):
 	i=''
+	n=''
+	count=0
 	for line in open('index.txt'):
-		i=int(line)
+		if count==0:
+			i=int(line)
+		else:
+			n=int(line)
+		count+=1
 	i-=1
 	if i<0:
 		return 'Reached beginning of search results'

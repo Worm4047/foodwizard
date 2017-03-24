@@ -15,7 +15,7 @@ DATAFILE = 'dishsearchresult.txt'
 	parshes html content to get links and names of the dishes
 	args : BeautifulSoup object 
 	returns : list of dish names and urls
-"""
+# """
 def findArticles(soup):
 	items = []
 	for ar in soup.find_all('article'):
@@ -27,8 +27,8 @@ def findArticles(soup):
 				temp=item['href'].split('/')
 				if len(temp)>3:
 					items.append((htag.text.strip()).lower()+'::::'+BASEURL+item['href'])
-				
-	return '\n'.join(items[0:min(len(items),LIMIT)]),len(items)
+	items=items[0:min(len(items),LIMIT)]		
+	return '\n'.join(items),len(items)
 
 
 """ 
@@ -51,4 +51,4 @@ def getDishesByName(query):
 	return n
 
 
-getDishesByName('egg rolls')
+# getDishesByName('egg rolls')

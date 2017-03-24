@@ -13,6 +13,10 @@ from searchDishesByName import *
 import ing_dish_from
 from getcategorydishnames import *
 import searchedDishIngredients as ingFunc
+try: 
+    from BeautifulSoup import BeautifulSoup
+except ImportError:
+    from bs4 import BeautifulSoup
 
 app = Flask(__name__)
 ask = Ask(app, "/")
@@ -48,6 +52,7 @@ def get_steps_of_dish(dishname):
     l = getSteps(dishname)
     print l
     retStr =" Steps found.Would you like to hear them out ?"
+    editHtmlFile()
     return statement(retStr)
 
 @ask.intent('nextstep')
@@ -108,5 +113,7 @@ def get_dish_ing(dishname):
     ing = ingFunc.getIngList(dishname)
     return statement('...'.join(ing))
 
+def editHtmlFile():
+    pass
 if __name__ == '__main__':
     app.run(debug=True)
