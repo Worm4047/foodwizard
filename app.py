@@ -72,6 +72,7 @@ def previous_step():
 
 @ask.intent('nstep',mapping={'nvalue':'nValue'})
 def n_step(nvalue):
+    # print nvalue
     li2=['1st','2nd','3rd','4th','5th','6th','7th','8th','9th','10th']
     li1=['first','second','third','fourth','fifth','sixth','seventh','eigth','ninth','tenth']
     print 'inside nth step'
@@ -79,7 +80,7 @@ def n_step(nvalue):
         ind=li2.index(nvalue)
     else:
         ind=li1.index(nvalue)
-            
+    print nvalue,ind      
     step=readNthLine('recipeSteps.txt',ind)
     return statement(step)
 

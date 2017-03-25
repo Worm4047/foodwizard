@@ -48,12 +48,14 @@ def readNthLine(fileName,ind):
 	i=''
 	n=''
 	count=0
+
 	for line in open('index.txt'):
 		if count==0:
 			i=int(line)
 		else:
 			n=int(line)
 		count+=1
+	print ind,n
 	if ind>=n:
 		return 'Reached end of search results'
 	contents=[]
