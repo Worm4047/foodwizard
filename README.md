@@ -26,6 +26,8 @@ Food wizard gives you the facility to choose from a wide variety of cuisines lik
 Each cuisine can further be exploited for it's dessert,drinks,main dishes,appetizers and bread.
 Thus providing an overall awesome experience for your kitchen time.
 
+## A web interface to list out steps of searched dish and it's ingredients requirement.
+ 
 # How FoodWizard helps 'COMMON MAN' ?
 
 Foodwizard creates the entire process of creating dishes seamless and verbal, thereby allowing users to interact with the device even while making the dishes, this way they won't have to `Touch` electronic devices whil cooking.
